@@ -1,0 +1,4 @@
+=READ ME=
+changelog 2:11 pm 6/07/2016
+>initial output done
+>edit and error parameters are non-functional but add, delete, index, and phpmyadmin implementation are working

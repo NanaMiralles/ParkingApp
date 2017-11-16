@@ -1,0 +1,43 @@
+<style>
+  .box{
+    margin:30px;
+    margin-top: 50px
+    padding: 20px;
+    background-color: rgba(255, 255, 255, .7);
+    min-height: 300px;
+  }
+</style>
+<div class="box">
+  <div class ='container' style ='padding:70px'>
+    <h1>Car Log</h1>
+
+    <table class="table table-striped">
+    <thead>
+      <th> ID</th>
+      <th> Plate Number </th>
+      <th> Brand </th>
+      <th> Slot Number </th>
+      <th> Is Taken</th>
+      <th> Created At</th>
+      <th> Action</th>
+    </thead>
+    <tbody>
+      <% @car.each do |x| %>
+        <tr> 
+          <td><%= x.id =%></td>
+          <td><%= x.plate_number =%></td>
+          <td> <%= x.brand =%></td>
+          <td> <%= x.slot_number =%></td>
+          <td> <%= x.is_taken =%></td>
+          <td> <%= x.created_at =%></td>
+
+          <td> <a href= "/car_logs/delete/<%=x.id%>" type="button" class="btn btn-lg btn-primary">Delete </a></td>
+        </tr>
+      <% end %>
+    </tbody>
+    </table>
+    <br><br>
+    <a href="/make"><button type="button" class="btn btn-lg btn-primary">Add New Car</button></a>
+    <a href="/"><button type="button" class="btn btn-lg btn-primary">Back</button></a>
+  </div>
+</div>

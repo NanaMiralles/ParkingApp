@@ -1,0 +1,49 @@
+<style>
+  .box{
+    margin:30px;
+    margin-top: 50px
+    padding: 20px;
+    background-color: rgba(255, 255, 255, .7);
+    min-height: 300px;
+  }
+</style>
+
+<div class="box">
+	<div class ='container' style= 'padding:70px'>
+
+	<h1>Add New Car Log</h1>
+
+	<%= form_tag("/create",method:"post") do %>
+		<label> Plate Number: </label>
+		<input name="plate_number" placeholder="Plate Number">
+		<br>
+
+		<label> Brand: </label>
+		<select name= "brand">
+			<option value="BMW"> BMW </option>
+			<option value="Chevrolet"> Chevrolet </option>
+			<option value="Honda"> Honda </option>
+			<option value="Hyundai"> Hyundai </option>
+			<option value="Isuzu"> Isuzu </option>
+			<option value="KIA"> KIA </option>
+			<option value="Lamborghini"> Lamborghini </option>
+			<option value="Mazda"> Mazda </option>
+			<option value="Mercedez"> Mercedez </option>
+			<option value="Mitsubishi"> Mitsubishi </option>
+			<option value="Porche"> Porsche </option>
+			<option value="Suzuki"> Suzuki </option>
+			<option value="Toyota"> Toyota </option>
+		</select>
+		<br>
+
+		<label> Slot Number: </label>
+		<input name="slot_number" placeholder="Slot Number">
+
+		<label> Is Taken?: </label>
+		<input type="radio" name="is_taken">
+		<br><br><br>
+		<button type="submit" class="btn btn-lg btn-primary">Submit</button>
+		<a href="/"><button type="button" class="btn btn-lg btn-primary">Back</button></a>
+	<% end %>
+	</div>
+</div>
